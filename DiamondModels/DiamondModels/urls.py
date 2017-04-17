@@ -15,7 +15,24 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from modelos import views as modelos_views
+from agencias import views as agencias_views
+from marcas import views as marcas_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^modelos/$', 
+        modelos_views.lista_modelos, 
+        name = "lista_modelos"),
+    
+    url(r'^agencias/$', 
+        agencias_views.lista_agencias, 
+        name = "lista_agencias"),
+
+    url(r'^marcas/$', 
+        marcas_views.lista_marcas, 
+        name = "lista_marcas"),
+
+
 ]
