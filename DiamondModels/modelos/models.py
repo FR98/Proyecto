@@ -12,6 +12,4 @@ class Modelo(models.Model):
 		return "%s %s - %s" % (
 			self.nombres,
 			self.apellidos,
-			self.altura,
-			self.peso,
 			self.agencia)

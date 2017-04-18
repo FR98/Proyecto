@@ -5,6 +5,6 @@ class Marca(models.Model):
 	telefono = models.IntegerField(default = 0)
 	
 	def __str__(self):
-		return "%s %s - %s" % (
+		return "%s - %s" % (
 			self.nombres,
 			self.telefono)

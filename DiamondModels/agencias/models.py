@@ -6,6 +6,6 @@ class Agencia(models.Model):
 	telefono = models.IntegerField(default = 0)
 
 	def __str__(self):
-		return "%s %s - %s" % (
-			self.nombres,
+		return "%s - %s" % (
+			self.nombre,
 			self.telefono)
