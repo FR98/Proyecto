@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Lista Agencias</title>
+	</head>
+	<body>
+		<h1>Lista de Agencias</h1>
+		<ul>
+			{% for agencia in agencias %}
+				<li>
+					<a href="{% url 'detalle_agencia' agencia_pk=agencia.id %}">{{agencia}}</a>
+				</li>
+			{% empty %}
+				<p>No hay agencias</p>
+			{% endfor %}
+			<h2>Nueva agencia</h2>
+			<form action="/agencias/crear/" method="POST">
+				{% csrf_token %}
+				{{agencia_form}}
+				<input type="Submit">
+			</form>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>{{agencia.nombre}}</title>
+	</head>
+	<body>
+		<h1>{{agencia.nombre}}</h1>
+		<ul>
+			{% for modelo in modelos %}
+				<li>
+					<p>{{modelo}}</p>
+				</li>
+			{% empty %}
+				<p>No hay modelos</p>
+			{% endfor %}
+		</ul>
+	</body>
+</html>

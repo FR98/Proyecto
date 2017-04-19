@@ -34,5 +34,11 @@ urlpatterns = [
         marcas_views.lista_marcas, 
         name = "lista_marcas"),
 
-
+    url(r'^agencias/(?P<agencia_pk>[0-9]+)', 
+        agencias_views.detalle_agencia, 
+        name = "detalle_agencia"),
+    
+    url(r'^agencias/crear/', 
+        agencias_views.crear_agencia, 
+        name="crear_agencia"),
 ]

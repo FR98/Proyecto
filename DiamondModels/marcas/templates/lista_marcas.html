@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Lista Marcas</title>
+	</head>
+	<body>
+		<h1>Lista de Marcas</h1>
+		<ul>
+			{% for marca in marcas %}
+				<li>{{marca}}</li>
+			{% empty %}
+				<p>No hay marcas</p>
+			{% endfor %}
+		</ul>
+	</body>
+</html>

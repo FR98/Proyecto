@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Lista Modelos</title>
+	</head>
+	<body>
+		<h1>Lista de Modelos</h1>
+		<ul>
+			{% for modelo in modelos %}
+				<li>{{modelo}}</li>
+			{% empty %}
+				<p>No hay modelos</p>
+			{% endfor %}
+		</ul>
+	</body>
+</html>

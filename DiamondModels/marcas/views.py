@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from marcas.models import Marca
 
 # Create your views here.
 
