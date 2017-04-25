@@ -18,9 +18,12 @@ from django.contrib import admin
 from modelos import views as modelos_views
 from agencias import views as agencias_views
 from marcas import views as marcas_views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^login/$', auth_views.login, name='login'),
 
     url(r'^modelos/$', 
         modelos_views.lista_modelos, 
