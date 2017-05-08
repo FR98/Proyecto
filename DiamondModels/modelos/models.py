@@ -9,13 +9,11 @@ class Modelo(models.Model):
 	altura = models.FloatField(default=0.0)
 	peso = models.FloatField(default=0.0)
 	telefono = models.IntegerField(default=0)
-	correo = models.CharField(max_length=50)
 	agencia = models.ForeignKey('agencias.Agencia')
 
 	def __str__(self):
-		return "%s %s: %s, %s --- %s" % (
+		return "%s %s: %s --- %s" % (
 			self.nombres,
 			self.apellidos,
 			self.telefono,
-			self.correo,
 			self.agencia)
