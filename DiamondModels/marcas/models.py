@@ -11,4 +11,4 @@ class Marca(models.Model):
 		return "%s: %s, %s" % (
 			self.nombre,
 			self.telefono,
-			self. correo)
+			self.correo)
