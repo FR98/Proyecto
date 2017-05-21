@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>{{marca.nombre}}</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static "style_mi_marca.css" %}">
+	</head>
+	<body>
+		<div class="top">
+			<div class="cajaNombre"><h1 class="nombreMarca">{{marca.nombre}}</h1></div>
+			<div class="cajalogo"><img class="logo" src="{% static "logo.jpg" %}"></div>
+			<button class="cerrarSesion">Cerrar Sesion</button>
+			<button class="perfil">Perfil</button>
+			
+		</div>
+
+		<div class="middle">
+			<button class="botonAgencias">Agencias</button>
+			<button class="botonModelos">Modelos</button>
+		</div>
+
+		<div class="bottom">
+			
+		</div>
+		
+		
+	</body>
+</html>

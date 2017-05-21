@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-#from marcas import views as marcas_views
+from marcas import views as marcas_views
 #from agencias import views as agencias_views
 #from modelos import views as modelos_views
 
@@ -26,22 +26,24 @@ urlpatterns = [
 
     url(r'^$', auth_views.login, name='home'),
 
-    #url(r'^marcas/(?P<marca_pk>[0-9]+)', 
-    #    marcas_views.detalle_marca, 
-    #    name = "detalle_marca"),
+    url(r'^marcas/admin/$', 
+        marcas_views.lista_marcas, 
+        name = "marcas"),
 
+    url(r'^marcas/(?P<marca_pk>[0-9]+)', 
+        marcas_views.detalle_marca, 
+        name = "mi_marca"),
 
-    #url(r'^agencias/(?P<agencia_pk>[0-9]+)', 
-    #    agencias_views.detalle_agencia, 
-    #    name = "detalle_agencia"),
-
-    #url(r'^marcas/$', 
-    #    marcas_views.mi_marca, 
-    #    name = "mi_marca"),
 
     #url(r'^agencias/$', 
-    #    agencias_views.mi_agencia, 
+    #    agencias_views.lista_agencias, 
+    #    name = "agencias"),
+    
+    #url(r'^agencias/(?P<agencia_pk>[0-9]+)', 
+    #    agencias_views.detalle_agencia, 
     #    name = "mi_agencia"),
+
+       
 
     #url(r'^modelos/$', 
     #    modelos_views.lista_modelos, 

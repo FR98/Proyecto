@@ -6,7 +6,9 @@
 		<h1>Lista de Marcas</h1>
 		<ul>
 			{% for marca in marcas %}
-				<li>{{marca}}</li>
+				<li>
+					<a href="{% url 'mi_marca' marca_pk=marca.id %}">{{marca}}</a>
+				</li>
 			{% empty %}
 				<p>No hay marcas</p>
 			{% endfor %}

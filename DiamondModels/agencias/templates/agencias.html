@@ -11,13 +11,13 @@
 				</li>
 			{% empty %}
 				<p>No hay agencias</p>
-			{% endfor %}
-			<h2>Nueva agencia</h2>
-			<form action="/agencias/crear/" method="POST">
-				{% csrf_token %}
-				{{agencia_form}}
-				<input type="Submit">
-			</form>
+			{% endfor %}	
 		</ul>
+		<h2>Nueva agencia</h2>
+		<form action="/agencias/crear/" method="POST">
+			{% csrf_token %}
+			{{agencia_form}}
+			<input type="Submit">
+		</form>
 	</body>
 </html>
