@@ -1,18 +1,18 @@
 from django import forms
-from agencias.models import Agencia
+#from agencias.models import Agencia
 
 
-class AgenciaRegistroForm(forms.ModelForm):
-	class Meta:
-		model = Agencia
-		fields = [
-			'nombre', 
-			'telefono',
-			'correo']
+#class AgenciaRegistroForm(forms.ModelForm):
+#	class Meta:
+#		model = Agencia
+#		fields = [
+#			'nombre', 
+#			'telefono',
+#			'correo']
 
-class AgenciaLoginForm(forms.ModelForm):
-	class Meta:
-		model = Agencia
-		fields = [
-			'correo',
-			'contraseña']
+#class AgenciaLoginForm(forms.ModelForm):
+#	class Meta:
+#		model = Agencia
+#		fields = [
+#			'correo',
+#			'contraseña']

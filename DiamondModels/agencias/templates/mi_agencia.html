@@ -1,17 +1,32 @@
 <html>
 	<head>
-		<title>{{agencia.nombre}}</title>
+		<title>DM - {{agencia.nombre}}</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static "style_mi_agencia.css" %}">
 	</head>
 	<body>
-		<h1>{{agencia.nombre}}</h1>
-		<ul>
-			{% for modelo in modelos %}
-				<li>
-					<p>{{modelo}}</p>
-				</li>
-			{% empty %}
-				<p>No hay modelos</p>
-			{% endfor %}
-		</ul>
+		<div class="top">
+			<div class="cajaNombre"><h1 class="nombreAgencia">{{agencia.nombre}}</h1></div>
+			<div class="cajalogo"><img class="logo" src="{% static "logo.jpg" %}"></div>
+			<button class="cerrarSesion">Cerrar Sesion</button>
+			<button class="perfil">Perfil</button>
+		</div>
+		<div class="middle">
+			<div class="cajaTusModelos"><h1 class="titulo_tusModelos">Tus Modelos</h1></div>
+			<div class="lista">
+				<ul>
+				{% for modelo in modelos %}
+					<li>
+						<p>{{modelo}}</p>
+					</li>
+				{% empty %}
+					<p>No hay modelos</p>
+				{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			
+		</div>
 	</body>
 </html>

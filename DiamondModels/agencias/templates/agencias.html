@@ -1,23 +1,29 @@
 <html>
 	<head>
-		<title>Lista Agencias</title>
+		<title>DM -Admin- Lista Agencias</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static "style_agencias_admin.css" %}">
 	</head>
 	<body>
-		<h1>Lista de Agencias</h1>
-		<ul>
-			{% for agencia in agencias %}
-				<li>
-					<a href="{% url 'detalle_agencia' agencia_pk=agencia.id %}">{{agencia}}</a>
-				</li>
-			{% empty %}
-				<p>No hay agencias</p>
-			{% endfor %}	
-		</ul>
-		<h2>Nueva agencia</h2>
-		<form action="/agencias/crear/" method="POST">
-			{% csrf_token %}
-			{{agencia_form}}
-			<input type="Submit">
-		</form>
+		<div class="top">
+			<div><img class="logo" src="{% static "logo.jpg" %}"></div>
+			<div class="cajaTitulo"><h1 class="titulo">Lista de Agencias</h1></div>
+		</div>
+		<div class="middle">
+			<div class="lista">
+				<ul>
+				{% for agencia in agencias %}
+					<li>
+						<a href="{% url 'mi_agencia' agencia_pk=agencia.id %}" style="color: grey; font-size: 30px">{{agencia}}</a>
+					</li>
+				{% empty %}
+					<p>No hay agencias</p>
+				{% endfor %}	
+				</ul>
+			</div>			
+		</div>
+		<div class="bottom">
+			
+		</div>		
 	</body>
 </html>
