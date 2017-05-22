@@ -13,17 +13,31 @@
 		</div>
 		<div class="middle">
 			<div class="cajaTusModelos"><h1 class="titulo_tusModelos">Tus Modelos</h1></div>
-			<div class="lista">
-				<ul>
-				{% for modelo in modelos %}
-					<li>
-						<p>{{modelo}}</p>
-					</li>
-				{% empty %}
-					<p>No hay modelos</p>
-				{% endfor %}
-				</ul>
+			<div class="caja_tabla">
+				<table class="tabla">
+					<tr class="fila_fotos">
+						<td><a href="http://google.com"><img src="{% static "logo.jpg" %}" height="200px"></a></td>
+					{% for modelo in modelos %}
+						<td>{{modelo.edad}}</td>
+					{% empty %}
+						<p>No hay modelos</p>
+					{% endfor %}
+					</tr>
+					<tr>
+						<td><a href="http://google.com" style="text-decoration:none; color:grey">VER TUS MODELOS</a></td>
+					{% for modelo in modelos %}
+						<td>{{modelo.nombres}} {{modelo.apellidos}}</td>
+					{% empty %}
+						<p>No hay modelos</p>
+					{% endfor %}
+						
+					</tr>
+				</table>
 			</div>
+			
+			<div class="caja_solicitudes"><h1 class="titulo_solicitudes">Solicitudes</h1></div>
+
+			<div class="agregarModelo"><a href="http://google.com"><img src="{% static "mas.png" %}" height="200px"></a></div>
 		</div>
 		<div class="bottom">
 			

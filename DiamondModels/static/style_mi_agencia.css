@@ -45,7 +45,7 @@ body{
 .middle{
 	background: #04155B;
 	background-size: 100%;
-	height: 400px;
+	height: 700px;
 	position: relative;
 }
 .middle .cajaTusModelos{
@@ -55,12 +55,46 @@ body{
     left: 15%;
 }
 .middle .titulo_tusModelos{
-	color: white;
+	color: grey;
 	font-size: 50px;
 }
-.middle .lista{
+.middle .caja_tabla{
 	position: absolute;
-	top: 15%;
+	transform: translateX(-50%);
+	top: 75px;
+	left: 50%;
+}
+.middle table{
+	border: white 1px solid;
+	border-collapse: collapse;
+}
+.middle .fila_fotos{
+	height: 200px;
+	max-height: 225px;
+}
+.middle td{
+	border: white 1px solid;
+	border-collapse: collapse;
+	padding: 10px;
+	text-align: center;
+	align-content: center;
+	color: grey;
+}
+.middle .caja_solicitudes{
+	position: absolute;
+	transform: translateX(-50%);
+	top: 325px;
+	left: 10%;
+}
+.middle .titulo_solicitudes{
+	color: grey;
+	font-size: 40px;
+}
+.middle .agregarModelo{
+	position: absolute;
+	transform: translate(-50%, -50%);
+	right: 0%;
+	bottom: 0%;
 }
 .bottom{
 	background: black;
