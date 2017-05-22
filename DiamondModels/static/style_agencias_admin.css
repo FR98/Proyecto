@@ -22,6 +22,24 @@ body{
 	color: white;
 	font-size: 	75px;
 }
+.top .botonAdmin{
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: 5%;
+	right: 0%;
+	border-width: 0px;
+	background-color: black;
+	color: white;
+}
+.top .botonHome{
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: 5%;
+	right: 5%;
+	border-width: 0px;
+	background-color: black;
+	color: white;
+}
 .middle{
 	background-color: #04155B;
 	background-size: 100%;
@@ -29,7 +47,7 @@ body{
 	position: relative;
 }
 .middle .lista{
-	
+	position: absolute;
 }
 .bottom{
 	background-color: black;
