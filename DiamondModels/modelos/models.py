@@ -10,6 +10,8 @@ class Modelo(models.Model):
 	peso = models.FloatField(default=0.0)
 	telefono = models.IntegerField(default=0)
 	agencia = models.ForeignKey('agencias.Agencia')
+	imagen = models.ImageField()
+
 
 	def __str__(self):
 		return "%s %s: %s --- %s" % (
