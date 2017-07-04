@@ -11,8 +11,24 @@
 			<h2 class="tituloagencia">Agencia</h2>
 			<div class="cajaModels"><h1 class="nombreModels">Models</h1></div>
 			<div class="imghome"><img src="{% static "diamante 2.jpg" %}"></div>
-			
-
 		</div>
+
+
+		<form method="POST" action="{% url 'marcas_login' %}">
+			{% csrf_token %}
+			<h2>Marca:</h2>
+			{{ form.as_p }}
+			<button type="submit">Acceder</button>
+		</form>
+
+		<form method="POST" action="">
+			{% csrf_token %}
+			<h2>Agencias:</h2>
+			{{ form.as_p }}
+			<button type="submit">Acceder</button>
+		</form>
+
+
+
 	</body>
 </html>

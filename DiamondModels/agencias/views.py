@@ -15,3 +15,6 @@ def detalle_agencia(request, agencia_pk):
 	return render(request, 'mi_agencia.html', {
 		'agencia':agencia, 
 		'modelos':modelos})
+
+def login_agencia():
+	pass
