@@ -22,15 +22,27 @@ body{
 	color: white;
 	font-size: 50px;
 	position: absolute;
-	top: 10%;
+	top: 1%;
 	left: 5%;
+}
+.bodyblock .form_loginMarca{
+	color: white;
+	position: absolute;
+	top: 15%;
+	left: 3%;
 }
 .bodyblock .tituloagencia{
 	color: white;
 	font-size: 50px;
 	position: absolute;
-	top: 10%;
+	top: 1%;
 	right: 5%;
+}
+.bodyblock .form_loginAgencia{
+	color: white;
+	position: absolute;
+	top: 15%;
+	right: 3%;
 }
 .bodyblock .cajaModels{
 	position: absolute;

@@ -8,7 +8,9 @@
 		<div class="top">
 			<div class="cajaNombre"><h1 class="nombreMarca">{{marca.nombre}}</h1></div>
 			<div class="cajalogo"><img class="logo" src="{% static "logo.jpg" %}"></div>
-			<button class="cerrarSesion">Cerrar Sesion</button>
+			<!-- boton o a?? -->
+			<button class="cerrarSesion" onclick="{% url 'home' %}">LogOut</button>
+			<!-- <a class="cerrarSesion" href="{% url 'home' %}">LogOut</a> -->
 			<button class="perfil">Perfil</button>
 			
 		</div>

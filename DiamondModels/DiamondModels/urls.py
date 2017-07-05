@@ -42,14 +42,13 @@ urlpatterns = [
         agencias_views.detalle_agencia, 
         name = "mi_agencia"),
 
-    # url(r'^agencias/login/$', 
-    #     agencias_views.login_agencias, 
-    #     name = "agencias_login"),  
-
     url(r'^marcas/login/$', 
         marcas_views.login_marca, 
-        name = "marcas_login"),
+        name = "marca_login"),
 
+    url(r'^agencias/login/$', 
+        agencias_views.login_agencia, 
+        name = "agencia_login"),  
 
 
     #url(r'^modelos/$', 

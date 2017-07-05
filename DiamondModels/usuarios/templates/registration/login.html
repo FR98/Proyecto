@@ -8,25 +8,31 @@
 		<div class="bodyblock">
 			<div class="cajaDiamond"><h1 class="nombreDiamond">Diamond</h1></div>
 			<h2 class="titulomarca">Marca</h2>
+
+			<form class="form_loginMarca" method="POST" action="{% url 'marca_login' %}">
+				{% csrf_token %}
+				<!-- Login Marca -->
+				{{ form.as_p }}
+				<button type="submit">Login</button>
+			</form>
+
+
 			<h2 class="tituloagencia">Agencia</h2>
+			
+			<form class="form_loginAgencia" method="POST" action="{% url 'agencia_login' %}">
+				{% csrf_token %}
+				<!-- Login Agencia -->
+				{{ form.as_p }}
+				<button type="submit">Login</button>
+			</form>
+
+
 			<div class="cajaModels"><h1 class="nombreModels">Models</h1></div>
 			<div class="imghome"><img src="{% static "diamante 2.jpg" %}"></div>
 		</div>
 
 
-		<form method="POST" action="{% url 'marcas_login' %}">
-			{% csrf_token %}
-			<h2>Marca:</h2>
-			{{ form.as_p }}
-			<button type="submit">Acceder</button>
-		</form>
 
-		<form method="POST" action="">
-			{% csrf_token %}
-			<h2>Agencias:</h2>
-			{{ form.as_p }}
-			<button type="submit">Acceder</button>
-		</form>
 
 
 
