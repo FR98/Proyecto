@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from marcas import views as marcas_views
 from agencias import views as agencias_views
+from django.contrib.auth.views import logout
 #from modelos import views as modelos_views
 
 
@@ -50,6 +51,13 @@ urlpatterns = [
         agencias_views.login_agencia, 
         name = "agencia_login"),  
 
+    url(r'^marcas/logout/$', 
+        marcas_views.logout_marca, 
+        name = "marca_logout"),
+
+    url(r'^agencias/logout/$', 
+        agencias_views.logout_agencia, 
+        name = "agencia_logout"),  
 
     #url(r'^modelos/$', 
     #    modelos_views.lista_modelos, 
