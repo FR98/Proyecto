@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from marcas.models import Marca
 
@@ -8,6 +9,7 @@ def lista_marcas(request):
 	marcas = Marca.objects.all()
 	return render(request, 'marcas.html', {'marcas': marcas})
 
+@login_required
 def detalle_marca(request, marca_pk):
 	marca = Marca.objects.get(pk = marca_pk)
 	return render(request, 'mi_marca.html', {
