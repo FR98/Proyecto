@@ -22,3 +22,6 @@ def login_marca(request):
 		mi_marca = user.marca_set.all().first()
 		return redirect("/marcas/" + str(mi_marca.pk))
 	return redirect("/")
+
+def logout_marca(request):
+	return redirect("/")

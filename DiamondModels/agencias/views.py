@@ -26,3 +26,6 @@ def login_agencia(request):
 		mi_agencia = user.agencia_set.all().first()
 		return redirect("/agencias/" + str(mi_agencia.pk))
 	return redirect("/")
+
+def logout_agencia(request):
+	return redirect("/")
