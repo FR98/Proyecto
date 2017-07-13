@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from agencias.models import Agencia
 from modelos.models import Modelo
@@ -10,6 +11,7 @@ def lista_agencias(request):
 	return render(request, 'agencias.html', {
 		'agencias': agencias})
 
+@login_required
 def detalle_agencia(request, agencia_pk):
 	agencia = Agencia.objects.get(pk = agencia_pk)
 	modelos = Modelo.objects.filter(agencia=agencia)
