@@ -8,7 +8,12 @@
 		<div class="top">
 			<div class="cajaNombre"><h1 class="nombreAgencia">{{agencia.nombre}}</h1></div>
 			<div class="cajalogo"><img class="logo" src="{% static "logo.jpg" %}"></div>
-			<button class="cerrarSesion">LogOut</button>
+			<form method="POST" action="{% url 'agencia_logout' %}">
+				{% csrf_token %}
+				<button type="submit" class="cerrarSesion">Logout</button>
+			</form>
+
+			
 			<button class="perfil">Perfil</button>
 		</div>
 		<div class="middle">

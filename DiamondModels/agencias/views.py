@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from agencias.models import Agencia
@@ -30,4 +30,5 @@ def login_agencia(request):
 	return redirect("/")
 
 def logout_agencia(request):
+	logout(request)
 	return redirect("/")

@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from marcas.models import Marca
@@ -26,4 +26,5 @@ def login_marca(request):
 	return redirect("/")
 
 def logout_marca(request):
+	logout(request)
 	return redirect("/")

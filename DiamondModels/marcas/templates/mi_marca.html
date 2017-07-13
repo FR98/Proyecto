@@ -8,9 +8,13 @@
 		<div class="top">
 			<div class="cajaNombre"><h1 class="nombreMarca">{{marca.nombre}}</h1></div>
 			<div class="cajalogo"><img class="logo" src="{% static "logo.jpg" %}"></div>
-			<!-- boton o a?? -->
-			<button class="cerrarSesion" onclick="{% url 'home' %}">LogOut</button>
-			<!-- <a class="cerrarSesion" href="{% url 'home' %}">LogOut</a> -->
+			<form method="POST" action="{% url 'marca_logout' %}">
+				{% csrf_token %}
+				<button type="submit" class="cerrarSesion">Logout</button>
+			</form>
+
+
+
 			<button class="perfil">Perfil</button>
 			
 		</div>
