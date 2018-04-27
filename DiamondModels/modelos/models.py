@@ -9,7 +9,7 @@ class Modelo(models.Model):
 	altura = models.FloatField(default=0.0)
 	peso = models.FloatField(default=0.0)
 	telefono = models.IntegerField(default=0)
-	agencia = models.ForeignKey('agencias.Agencia')
+	agencia = models.ForeignKey('agencias.Agencia', on_delete=models.CASCADE)
 	imagen = models.ImageField(null=True)
 
 
